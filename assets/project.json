@@ -1,0 +1,195 @@
+{
+	"contentrating" : "Everyone",
+	"description" : "I also tried to cram with all sorts of settings)",
+	"file" : "index.html",
+	"general" : 
+	{
+		"localization" : 
+		{
+			"en-us" : 
+			{
+				"ui_avt_color" : "Render color",
+				"ui_avt_show" : "Show visualization",
+				"ui_background_color" : "Background color",
+				"ui_main_color" : "Main color",
+				"ui_main_image" : "Center image",
+				"ui_main_image_1" : "Standard image",
+				"ui_main_image_2" : "Your image",
+				"ui_main_image_3" : "No image",
+				"ui_main_image_data" : "Image path",
+				"ui_main_image_dynamycs" : "Image Motion",
+				"ui_main_image_dynamycs_1" : "Follows the cursor",
+				"ui_main_image_dynamycs_2" : "Rotation",
+				"ui_main_image_dynamycs_3" : "Without movement",
+				"ui_rotation_offset" : "Rotate image",
+				"ui_rotation_speed" : "Speed ​​of rotation",
+				"ui_show_a_particles" : "Display the number of particles",
+				"ui_show_a_time" : "Display time",
+				"ui_show_rect" : "Show rect"
+			},
+			"ru-ru" : 
+			{
+				"ui_avt_color" : "Цвет визуализации",
+				"ui_avt_show" : "Показывать визуализацию",
+				"ui_background_color" : "Цвет заднего фона",
+				"ui_main_color" : "Главный цвет",
+				"ui_main_image" : "Центральное изображение",
+				"ui_main_image_1" : "Стандартное изображение",
+				"ui_main_image_2" : "Ваше изображение",
+				"ui_main_image_3" : "Без изображения",
+				"ui_main_image_data" : "Путь к изображению",
+				"ui_main_image_dynamycs" : "Движение изображения",
+				"ui_main_image_dynamycs_1" : "Следует за курсором",
+				"ui_main_image_dynamycs_2" : "Вращение",
+				"ui_main_image_dynamycs_3" : "Без движения",
+				"ui_rotation_offset" : "Поврот изображения",
+				"ui_rotation_speed" : "Скорость вращения",
+				"ui_show_a_particles" : "Отображать количество частиц",
+				"ui_show_a_time" : "Отображать время",
+				"ui_show_rect" : "Показывать обводку"
+			}
+		},
+		"properties" : 
+		{
+			"avt_color" : 
+			{
+				"condition" : "avt_show.value == true",
+				"order" : 9,
+				"text" : "ui_avt_color",
+				"type" : "color",
+				"value" : "0.2 0.2 0.2"
+			},
+			"avt_show" : 
+			{
+				"order" : 8,
+				"text" : "ui_avt_show",
+				"type" : "bool",
+				"value" : true
+			},
+			"background_color" : 
+			{
+				"order" : 11,
+				"text" : "ui_background_color",
+				"type" : "color",
+				"value" : "1 1 1"
+			},
+			"main_color" : 
+			{
+				"order" : 10,
+				"text" : "ui_main_color",
+				"type" : "color",
+				"value" : "0.2 0.2 0.2"
+			},
+			"main_image" : 
+			{
+				"options" : 
+				[
+					{
+						"label" : "ui_main_image_1",
+						"value" : 1
+					},
+					{
+						"label" : "ui_main_image_2",
+						"value" : 2
+					},
+					{
+						"label" : "ui_main_image_3",
+						"value" : 3
+					}
+				],
+				"order" : 1,
+				"text" : "ui_main_image",
+				"type" : "combo",
+				"value" : 1
+			},
+			"main_image_data" : 
+			{
+				"condition" : "main_image.value == 2",
+				"order" : 2,
+				"text" : "ui_main_image_data",
+				"type" : "file"
+			},
+			"main_image_dynamycs" : 
+			{
+				"condition" : "main_image.value != 3",
+				"options" : 
+				[
+					{
+						"label" : "ui_main_image_dynamycs_1",
+						"value" : 1
+					},
+					{
+						"label" : "ui_main_image_dynamycs_2",
+						"value" : 2
+					},
+					{
+						"label" : "ui_main_image_dynamycs_3",
+						"value" : 3
+					}
+				],
+				"order" : 3,
+				"text" : "ui_main_image_dynamycs",
+				"type" : "combo",
+				"value" : 1
+			},
+			"rotation_offset" : 
+			{
+				"condition" : "main_image_dynamycs.value == 3 && main_image.value != 3",
+				"editable" : true,
+				"max" : 360,
+				"min" : 0,
+				"order" : 4,
+				"text" : "ui_rotation_offset",
+				"type" : "slider",
+				"value" : 180
+			},
+			"rotation_speed" : 
+			{
+				"condition" : "main_image_dynamycs.value == 2 && main_image.value != 3",
+				"editable" : true,
+				"max" : 360,
+				"min" : 0,
+				"order" : 5,
+				"text" : "ui_rotation_speed",
+				"type" : "slider",
+				"value" : 1
+			},
+			"schemecolor" : 
+			{
+				"order" : 0,
+				"text" : "ui_browse_properties_scheme_color",
+				"type" : "color",
+				"value" : "0 0 0"
+			},
+			"show_a_particles" : 
+			{
+				"order" : 7,
+				"text" : "ui_show_a_particles",
+				"type" : "bool",
+				"value" : true
+			},
+			"show_a_time" : 
+			{
+				"order" : 6,
+				"text" : "ui_show_a_time",
+				"type" : "bool",
+				"value" : true
+			},
+			"show_rect" : 
+			{
+				"order" : 8,
+				"text" : "ui_show_rect",
+				"type" : "bool",
+				"value" : true
+			}
+		},
+		"supportsaudioprocessing" : true
+	},
+	"preview" : "preview.png",
+	"tags" : [ "Relaxing" ],
+	"title" : "Black && White",
+	"type" : "web",
+	"visibility" : "public",
+	"workshopid" : "1845230279",
+	"workshopurl" : "steam://url/CommunityFilePage/1845230279"
+}

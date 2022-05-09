@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "downlevelIteration": true,
+        "lib": [ "webworker", "es5", "scripthost", "DOM" ],
+        "target": "ES5",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-jsx"
+    }
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: d_face;
+    src: url(../fonts/14155.otf);
+}
+
+body{
+    margin: 0px;
+    overflow: hidden;
+}
+
+#FNGUI{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 100;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+#FNBKG{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0px;
+    left: 0px;
+}
